@@ -5,5 +5,5 @@ module.exports = {
     "src": { url: "/dist" },
     "public": { url: "/", static: true }
   },
-  plugins: ["@snowpack/plugin-svelte", "@snowpack/plugin-dotenv"],
+  plugins: ["@snowpack/plugin-svelte", "@snowpack/plugin-dotenv", '@snowpack/plugin-typescript'],
 };
