@@ -28,6 +28,13 @@ docker-compose up -d
 docker-compose exec app bash
 ```
 
+# init
+
+```console
+docker-compose exec app bash
+npm install
+```
+
 # svelte server
 
 ```console
