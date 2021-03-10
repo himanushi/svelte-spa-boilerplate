@@ -7,20 +7,19 @@ module.exports = {
   "extends": ["eslint:all"],
   "overrides": [
     {
-      "extends": "./lint/.eslintrc.javascript.js",
+      "extends": "./linter/.eslintrc.javascript.js",
       "files": ["*.js"]
     },
     {
-      "extends": "./lint/.eslintrc.typescript.js",
+      "extends": "./linter/.eslintrc.typescript.js",
       "files": ["*.ts"]
     },
     {
-      "extends": "./lint/.eslintrc.svelte.js",
+      "extends": "./linter/.eslintrc.svelte.js",
       "files": ["*.svelte"]
     }
   ],
   "rules": {
-
     // キャメルケースを強要しない
     "camelcase": "off",
 
