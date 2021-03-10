@@ -2,6 +2,7 @@
 - eslint
 - stylelint
 - prettier
+- typescript
 - snowpack
 - svelte
 - tailwindcss
