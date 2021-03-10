@@ -32,3 +32,26 @@ docker-compose exec app bash
 ```console
 npm run start
 ```
+
+# vscode recommendations
+
+```json
+{
+  "recommendations": [
+    // svelte
+    "svelte.svelte-vscode",
+    // eslint
+    "dbaeumer.vscode-eslint",
+    // stylelint
+    "stylelint.vscode-stylelint",
+    // prettier
+    "esbenp.prettier-vscode",
+    // fix with vscode prettier → eslint
+    "rohit-gohri.format-code-action",
+    // tailwindCSS classname autocomplete
+    "bradlc.vscode-tailwindcss",
+    // vscode explorer icons
+    "vscode-icons-team.vscode-icons"
+  ]
+}
+```
