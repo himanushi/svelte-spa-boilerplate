@@ -47,7 +47,7 @@ npm run start
     "stylelint.vscode-stylelint",
     // prettier
     "esbenp.prettier-vscode",
-    // fix with vscode prettier → eslint
+    // fix with vscode prettier → eslint → stylelint
     "rohit-gohri.format-code-action",
     // tailwindCSS classname autocomplete
     "bradlc.vscode-tailwindcss",
