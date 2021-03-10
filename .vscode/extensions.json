@@ -1,12 +1,18 @@
 {
   "recommendations": [
-    // Svelte
+    // svelte
     "svelte.svelte-vscode",
-    // Eslint
+    // eslint
     "dbaeumer.vscode-eslint",
-    // Prettier
+    // stylelint
+    "stylelint.vscode-stylelint",
+    // prettier
     "esbenp.prettier-vscode",
-    // Fix with vscode prettier and eslint
-    "rohit-gohri.format-code-action"
+    // fix with vscode prettier and eslint
+    "rohit-gohri.format-code-action",
+    // tailwindCSS classname autocomplete
+    "bradlc.vscode-tailwindcss",
+    // vscode explorer icons
+    "vscode-icons-team.vscode-icons"
   ]
 }
