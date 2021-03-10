@@ -36,7 +36,7 @@ npm run start
 
 # vscode recommendations
 
-```json
+```jsonc
 {
   "recommendations": [
     // svelte
