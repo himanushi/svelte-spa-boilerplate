@@ -6,7 +6,7 @@
 
 <h1 class="hello">Hello {name}!</h1>
 
-<style>
+<style lang="scss">
   .hello {
     @apply text-center;
   }
