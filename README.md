@@ -3,6 +3,7 @@
 - stylelint
 - prettier
 - typescript
+- scss
 - snowpack
 - svelte
 - tailwindcss
