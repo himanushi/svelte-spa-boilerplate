@@ -32,6 +32,9 @@ module.exports = {
     // function がズレるので無効
     "function-call-argument-newline": "off",
 
+    // function の括弧内での改行を強制しない
+    "function-paren-newline": "off",
+
     // 1文字の変数を許可しない
     "id-length": [
       "error",
@@ -40,8 +43,10 @@ module.exports = {
 
     // import 文はソートする
     "import/order": [
-      2,
-      { "alphabetize": { "order": "asc" } }
+      "error",
+      {
+        "alphabetize": { "order": "asc" }
+      }
     ],
 
     // インデントはスペース2個分
@@ -52,6 +57,12 @@ module.exports = {
 
     // 初期化するときに初期値がなくても良い
     "init-declarations": "off",
+
+    // コメントのみ最大列無視
+    "max-len": [
+      "error",
+      { "ignoreComments": true }
+    ],
 
     // ファイルの最大行数を制限しない
     "max-lines": "off",
@@ -66,11 +77,26 @@ module.exports = {
     // process.env 使用許可
     "no-process-env": "off",
 
+    // return の時に変数に代入できる
+    "no-return-assign": "off",
+
+    // typescript で nest した [key in object] をするため
+    "no-shadow": [
+      "error",
+      { "allow": ["key"] }
+    ],
+
     // 三項演算子有効
     "no-ternary": "off",
 
     // undefined 使える
     "no-undefined": "off",
+
+    // typescript で [key in object] をするため
+    "no-unused-vars": [
+      "error",
+      { "varsIgnorePattern": "key" }
+    ],
 
     // object の隙間を開ける
     "object-curly-spacing": [
@@ -81,9 +107,10 @@ module.exports = {
     // const 宣言をまとめない
     "one-var": "off",
 
-    // object キーをソートする
-    "sort-imports": 0,
+    // import をソートする
+    "sort-imports": "off",
 
+    // object key をソートする
     "sort-keys-fix/sort-keys-fix": "error",
 
     // "use strict" を強要しない

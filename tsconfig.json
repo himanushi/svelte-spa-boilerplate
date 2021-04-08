@@ -1,8 +1,9 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
-  "include": ["src/**/*", "types/*"],
+  "include": ["src/**/*", "src/@types"],
   "exclude": ["node_modules/**/*"],
   "compilerOptions": {
+    "typeRoots": ["node_modules/@types", "src/@types"],
     "types": ["svelte"],
     "module": "esnext",
     "target": "esnext",
@@ -19,6 +20,6 @@
     "resolveJsonModule": true,
     "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "remove"
   }
 }

@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "svelte": "^3.35.0",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.1.1"
   },
   "devDependencies": {
     "@snowpack/plugin-dotenv": "^2.0.5",

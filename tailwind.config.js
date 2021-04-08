@@ -1,8 +1,10 @@
 module.exports = {
+  "mode": "jit",
   "plugins": [],
-  "purge": {
-    "content": ["./src/**/*.svelte"]
-  },
+  "purge": [
+    "./public/*.html",
+    "./src/**/*.{js,ts,svelte}"
+  ],
 
   /*
    * eslint では、CSS で ":" を使用するとパーサーエラーが発生することがあります。

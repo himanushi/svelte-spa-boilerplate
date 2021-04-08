@@ -66,6 +66,11 @@ npm run start
 ```
 
 # prettier
+
 `svelteIndentScriptAndStyle` は、インデントが存在する場合に eslint の autofix に不具合が生じることがあるため false にしている。
+
 `svelteIndentScriptAndStyle` is set to false because it may cause problems with eslint's autofix if indentation is present.
 
+# example
+
+https://github.com/himanushi/music-client-v3
