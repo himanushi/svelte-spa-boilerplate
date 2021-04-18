@@ -20,6 +20,12 @@ module.exports = {
     }
   ],
   "rules": {
+    // アロー関数のワンライナーを許可する
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+
     // キャメルケースを強要しない
     "camelcase": "off",
 
@@ -30,7 +36,10 @@ module.exports = {
     "default-param-last": "off",
 
     // function がズレるので無効
-    "function-call-argument-newline": "off",
+    "function-call-argument-newline": [
+      "error",
+      "consistent"
+    ],
 
     // function の括弧内での改行を強制しない
     "function-paren-newline": "off",
@@ -44,9 +53,7 @@ module.exports = {
     // import 文はソートする
     "import/order": [
       "error",
-      {
-        "alphabetize": { "order": "asc" }
-      }
+      { "alphabetize": { "order": "asc" } }
     ],
 
     // インデントはスペース2個分
@@ -61,7 +68,10 @@ module.exports = {
     // コメントのみ最大列無視
     "max-len": [
       "error",
-      { "ignoreComments": true }
+      {
+        "code": 120,
+        "ignoreComments": true
+      }
     ],
 
     // ファイルの最大行数を制限しない
@@ -73,6 +83,9 @@ module.exports = {
 
     // マジックナンバーを許可する
     "no-magic-numbers": "off",
+
+    // 演算子の混在を許可する
+    "no-mixed-operators": "off",
 
     // process.env 使用許可
     "no-process-env": "off",
@@ -95,7 +108,16 @@ module.exports = {
     // typescript で [key in object] をするため
     "no-unused-vars": [
       "error",
-      { "varsIgnorePattern": "key" }
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^key$"
+      }
+    ],
+
+    // object 内の改行
+    "object-curly-newline": [
+      "error",
+      { "minProperties": 2 }
     ],
 
     // object の隙間を開ける
@@ -106,6 +128,9 @@ module.exports = {
 
     // const 宣言をまとめない
     "one-var": "off",
+
+    // ブロック内の改行は prettier に任せる
+    "padded-blocks": "off",
 
     // import をソートする
     "sort-imports": "off",

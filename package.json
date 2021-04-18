@@ -2,7 +2,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "lint": "prettier --write . && eslint --fix ."
+    "lint": "prettier --write . && eslint --fix --ext .js,.ts . && eslint --fix --ext .svelte ."
   },
   "dependencies": {
     "svelte": "^3.35.0",
