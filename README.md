@@ -1,7 +1,9 @@
 # はじめに
 
-Svelte で高速で SPA を開発するためのセットです。ルーティングも含まれます。
+Svelte で SPA を開発するためのセットです。ルーティングも含まれます。
+
 git と docker と docker-compose が事前に必要となります。
+
 エディターは Visual Studio Code が必須です。
 
 # 内容
