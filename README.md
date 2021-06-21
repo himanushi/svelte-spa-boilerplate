@@ -1,32 +1,65 @@
+# はじめに
+
+Svelte で高速で SPA を開発するためのセットです。ルーティングも含まれます。
+git と docker と docker-compose が事前に必要となります。
+
+# 内容
+
+### 環境構築用
+
 - docker-compose
+
+### 言語など
+
+- svelte
+- typescript
+- scss
+
+### linter & formatter
+
 - eslint
 - stylelint
 - prettier
-- typescript
-- scss
+
+## フレームワークなど
+
 - snowpack
-- svelte
 - tailwindcss
+- routify
 
-# mirror
+# リポジトリ複製
+
+1. リポジトリの作成
+
+   - https://github.com/new
+
+2. このリポジトリのコピー
 
 ```console
-git clone --depth=1 --branch=main git@github.com:himanushi/snowpack-svelte-typescript-tailwindcss.git dir-name
+git clone --depth=1 --branch=main git@github.com:himanushi/snowpack-svelte-typescript-scss.git dir-name
 rm -rf ./dir-name/.git
+
+cd dir-name
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:<ユーザー名>/<新規作成したリポジトリ名>.git
+git push -uf origin main
 ```
 
-# docker build
+# 環境構築
 
 ```console
-cd dir-name
 docker-compose build
+docker-compose run app npm install
 ```
 
-# docker dive
+# docker-compose 起動
 
 ```console
 docker-compose up -d
-docker-compose exec app bash
 ```
 
 # init
