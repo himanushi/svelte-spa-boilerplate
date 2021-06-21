@@ -26,8 +26,6 @@ RUN mkdir /app
 WORKDIR /app
 COPY . /app
 
-RUN npm install
-
 # ref: https://qiita.com/soarflat/items/06377f3b96964964a65d
 ENV PATH $PATH:./node_modules/.bin
 
