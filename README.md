@@ -77,9 +77,7 @@ npm run start
 
 以下 URL をブラウザで確認
 
-```
 http://localhost:8080
-```
 
 # Visual Studio Code の必須プラグイン
 
