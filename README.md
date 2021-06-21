@@ -8,7 +8,7 @@
 - svelte
 - tailwindcss
 
-# clone
+# mirror
 
 ```console
 git clone --depth=1 --branch=main git@github.com:himanushi/snowpack-svelte-typescript-tailwindcss.git dir-name
