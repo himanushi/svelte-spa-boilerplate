@@ -1,24 +1,40 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 
 module.exports = {
-  "alias": { "~": "./src" },
-  "mount": {
-    "public": {
-      "static": true,
-      "url": "/"
-    },
-    "src": { "url": "/dist" }
+  alias: {
+    routify: "./.routify",
+    "~": "./src"
   },
-  "plugins": [
+  devOptions: { tailwindConfig: "./tailwind.config.js" },
+  mount: {
+    ".routify": { url: "/" },
+    public: {
+      static: true,
+      url: "/"
+    },
+    src: { url: "/" }
+  },
+  optimize: {
+    bundle: true,
+    manifest: false,
+    minify: true,
+    sourcemap: false
+  },
+  packageOptions: { knownEntrypoints: [
+    "@roxi/routify",
+    "@roxi/routify/runtime/buildRoutes"
+  ] },
+  plugins: [
     "@snowpack/plugin-svelte",
     "@snowpack/plugin-dotenv",
-    "@snowpack/plugin-typescript"
+    "@snowpack/plugin-typescript",
+    "@snowpack/plugin-postcss"
   ],
-  "routes": [
+  routes: [
     {
-      "dest": "/index.html",
-      "match": "routes",
-      "src": ".*"
+      dest: "/index.html",
+      match: "routes",
+      src: ".*"
     }
   ]
 };

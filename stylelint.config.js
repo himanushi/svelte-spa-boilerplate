@@ -1,16 +1,16 @@
 module.exports = {
-  "extends": "stylelint-config-recommended",
-  "rules": {
+  extends: "stylelint-config-recommended",
+  rules: {
     "at-rule-no-unknown": [
       true,
-      { "ignoreAtRules": [
+      { ignoreAtRules: [
         "extends",
         "tailwind"
       ] }
     ],
     "selector-pseudo-class-no-unknown": [
       true,
-      { "ignorePseudoClasses": ["global"] }
+      { ignorePseudoClasses: ["global"] }
     ]
   }
 };

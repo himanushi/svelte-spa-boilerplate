@@ -1,25 +1,25 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
+  env: {
+    browser: true,
+    es6: true,
+    node: true
   },
-  "extends": ["eslint:all"],
-  "overrides": [
+  extends: ["eslint:all"],
+  overrides: [
     {
-      "extends": "./linter/.eslintrc.javascript.js",
-      "files": ["*.js"]
+      extends: "./linter/.eslintrc.javascript.js",
+      files: ["*.js"]
     },
     {
-      "extends": "./linter/.eslintrc.typescript.js",
-      "files": ["*.ts"]
+      extends: "./linter/.eslintrc.typescript.js",
+      files: ["*.ts"]
     },
     {
-      "extends": "./linter/.eslintrc.svelte.js",
-      "files": ["*.svelte"]
+      extends: "./linter/.eslintrc.svelte.js",
+      files: ["*.svelte"]
     }
   ],
-  "rules": {
+  rules: {
     // アロー関数のワンライナーを許可する
     "arrow-body-style": [
       "error",
@@ -27,10 +27,13 @@ module.exports = {
     ],
 
     // キャメルケースを強要しない
-    "camelcase": "off",
+    camelcase: "off",
 
     // コメントアウトの文章の初めを大文字にしない
     "capitalized-comments": "off",
+
+    // 戻り値の値を強制しない
+    "consistent-return": "off",
 
     // デフォルト値がある引数は最後にしなくても良い
     "default-param-last": "off",
@@ -47,17 +50,22 @@ module.exports = {
     // 1文字の変数を許可しない
     "id-length": [
       "error",
-      { "exceptions": ["_"] }
+      { exceptions: [
+        "_",
+        "x",
+        "y",
+        "a"
+      ] }
     ],
 
     // import 文はソートする
     "import/order": [
       "error",
-      { "alphabetize": { "order": "asc" } }
+      { alphabetize: { order: "asc" } }
     ],
 
     // インデントはスペース2個分
-    "indent": [
+    indent: [
       "error",
       2
     ],
@@ -69,8 +77,9 @@ module.exports = {
     "max-len": [
       "error",
       {
-        "code": 120,
-        "ignoreComments": true
+        code: 160,
+        ignoreComments: true,
+        ignoreTemplateLiterals: true
       }
     ],
 
@@ -78,6 +87,18 @@ module.exports = {
     "max-lines": "off",
 
     "max-statements": "off",
+
+    // 複数行用のコメント記述法を強制しない
+    "multiline-comment-style": "off",
+
+    // 三項演算子は改行してもしなくても良い
+    "multiline-ternary": [
+      "error",
+      "never"
+    ],
+
+    // アロー関数を有効にする
+    "no-confusing-arrow": "off",
 
     "no-duplicate-imports": "off",
 
@@ -96,11 +117,14 @@ module.exports = {
     // typescript で nest した [key in object] をするため
     "no-shadow": [
       "error",
-      { "allow": ["key"] }
+      { allow: ["key"] }
     ],
 
     // 三項演算子有効
     "no-ternary": "off",
+
+    // undefined で初期化しても良い
+    "no-undef-init": "off",
 
     // undefined 使える
     "no-undefined": "off",
@@ -109,15 +133,15 @@ module.exports = {
     "no-unused-vars": [
       "error",
       {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^key$"
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^key$"
       }
     ],
 
     // object 内の改行
     "object-curly-newline": [
       "error",
-      { "minProperties": 2 }
+      { minProperties: 2 }
     ],
 
     // object の隙間を開ける
@@ -129,6 +153,12 @@ module.exports = {
     // const 宣言をまとめない
     "one-var": "off",
 
+    // object key のダブルクォーツを強制しない
+    "quote-props": [
+      "error",
+      "as-needed"
+    ],
+
     // import をソートする
     "sort-imports": "off",
 
@@ -136,7 +166,7 @@ module.exports = {
     "sort-keys-fix/sort-keys-fix": "error",
 
     // "use strict" を強要しない
-    "strict": [
+    strict: [
       "error",
       "never"
     ]

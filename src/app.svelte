@@ -1,13 +1,8 @@
 <script lang="ts">
-import "./tailwind-styles.svelte";
+import "~/app.css";
 
-const name: string = "world";
+import { Router } from "@roxi/routify";
+import { routes } from "routify/routes";
 </script>
 
-<h1>Hello {name}!</h1>
-
-<style lang="scss">
-h1 {
-  @apply text-center;
-}
-</style>
+<Router {routes} />
