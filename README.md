@@ -79,6 +79,12 @@ npm run start
 
 http://localhost:8080
 
+# 本番 build
+
+```console
+npm run build
+```
+
 # Visual Studio Code の必須プラグイン
 
 プラグイン追加後の設定変更は特に必要ありません。
