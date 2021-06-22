@@ -2,6 +2,22 @@
 import { goto } from "@roxi/routify";
 
 let text = "Hellow World!!";
+
+// スコープ内に変数 text が存在しないため1度のみ実行
+$: {
+
+  // eslint-disable-next-line no-console
+  console.log("一度の実行");
+
+}
+
+// スコープ内に変数 text が存在するため text が変更されるたび実行
+$: {
+
+  // eslint-disable-next-line no-console
+  console.log(`text(${text}) が変更するたびに実行`);
+
+}
 </script>
 
 <div>
