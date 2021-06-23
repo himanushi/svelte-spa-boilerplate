@@ -3,3 +3,4 @@ package-lock.json
 *.md
 .routify
 /build
+.DS_Store
