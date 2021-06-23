@@ -72,6 +72,11 @@ docker-compose up -d
 docker-compose down
 ```
 
+### tips
+開発していてたまに `ENOENT: no such file or directory` のエラーが出ることがあります。
+この場合はファイルの同期がうまくいっていない可能性があります。
+この場合は `docker-compose down` で一度停止してから再度起動するとなおります。
+
 # 開発サーバー起動
 
 `docker-compose up -d` 実行後に開発サーバー起動可能
