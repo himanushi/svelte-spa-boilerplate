@@ -66,13 +66,18 @@ PC 再起動後などに再実行します。
 docker-compose up -d
 ```
 
-# snowpack server 起動
-
-`docker-compose up -d` 実行後に snowpack server が起動可能
+# docker-compose 停止
 
 ```console
-docker-compose exec app bash
-npm run start
+docker-compose down
+```
+
+# 開発サーバー起動
+
+`docker-compose up -d` 実行後に開発サーバー起動可能
+
+```console
+docker-compose exec app npm run start
 ```
 
 以下 URL をブラウザで確認
@@ -82,7 +87,7 @@ http://localhost:8080
 # 本番 build
 
 ```console
-npm run build
+docker-compose exec app npm run build
 ```
 
 # Visual Studio Code の必須プラグイン
