@@ -55,7 +55,7 @@ div {
   }
 
   input {
-    @apply h-[100px] w-[400px];
+    @apply h-[100px] w-[300px];
     @apply text-center rounded border-2 border-blue-100;
     @apply focus:border-blue-900;
   }

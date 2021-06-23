@@ -7,18 +7,11 @@
       name="viewport"
       content="minimum-scale=1, initial-scale=1, width=device-width"
     />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="description" content="Snowpack App" />
     <title>Snowpack App</title>
     <script type="module" src="/index.js"></script>
-    <script type="text/javascript">
-      // ref: https://css-tricks.com/the-trick-to-viewport-units-on-mobile
-      const resize = () => {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty("--vh", `${vh}px`);
-      };
-      window.addEventListener("resize", resize);
-      resize();
-    </script>
   </head>
   <body></body>
 </html>
