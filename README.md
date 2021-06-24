@@ -1,8 +1,6 @@
 # はじめに
 
-Svelte で SPA を開発するためのセットです。ルーティングも含まれます。
-
-git と docker と docker-compose が事前に必要となります。
+Svelte で SPA を開発するための定型分です。ルーティングも含まれます。
 
 エディターは Visual Studio Code が必須です。
 
@@ -28,61 +26,16 @@ git と docker と docker-compose が事前に必要となります。
 
 # リポジトリ複製
 
-1. リポジトリの作成
-
-   - https://github.com/new
-
-2. このリポジトリのコピー
-
 ```console
-git clone --depth=1 --branch=main git@github.com:himanushi/snowpack-svelte-typescript-scss.git dir-name
-rm -rf ./dir-name/.git
-
-cd dir-name
-
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin git@github.com:<ユーザー名>/<新規作成したリポジトリ名>.git
-git push -uf origin main
+npx degit himanushi/svelte-spa-boilerplate <app-name>
+cd <app-name>
+npm install
 ```
-
-# 環境構築
-
-実行中はコーヒーでも飲んで待機します。
-
-```console
-docker-compose build
-docker-compose run app npm install
-```
-
-# docker-compose 起動
-
-一度実行すれば良いです。
-PC 再起動後などに再実行します。
-
-```console
-docker-compose up -d
-```
-
-# docker-compose 停止
-
-```console
-docker-compose down
-```
-
-### tips
-開発していてたまに `ENOENT: no such file or directory` のエラーが出ることがあります。
-この場合はファイルの同期がうまくいっていない可能性があります。
-この場合は `docker-compose down` で一度停止してから再度起動するとなおります。
 
 # 開発サーバー起動
 
-`docker-compose up -d` 実行後に開発サーバー起動可能
-
 ```console
-docker-compose exec app npm run start
+npm run start
 ```
 
 以下 URL をブラウザで確認
@@ -92,12 +45,14 @@ http://localhost:8080
 # 本番 build
 
 ```console
-docker-compose exec app npm run build
+npm run build
 ```
 
 # Visual Studio Code の必須プラグイン
 
 プラグイン追加後の設定変更は特に必要ありません。
+
+ファイル保存時自動で ESLint と Prettier が整形します。
 
 ```jsonc
 {
