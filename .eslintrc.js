@@ -153,6 +153,9 @@ module.exports = {
     // const 宣言をまとめない
     "one-var": "off",
 
+    // 行間を開けない
+    "padded-blocks": "off",
+
     // object key のダブルクォーツを強制しない
     "quote-props": [
       "error",
