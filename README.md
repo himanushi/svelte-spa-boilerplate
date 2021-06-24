@@ -1,6 +1,6 @@
 # 概要
 
-Svelte で SPA を開発するための定型分です。ルーティングも含まれます。
+Svelte で SPA を開発するための boilerplate です。 routing も含まれます。
 
 エディターは Visual Studio Code が必須です。
 
