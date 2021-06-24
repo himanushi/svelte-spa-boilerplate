@@ -1,10 +1,14 @@
 {
   "scripts": {
-    "start": "run-p route dev",
+    "start": "run-p routing dev",
     "dev": "snowpack dev",
-    "build": "rm -fr build && routify -b && snowpack build && . scripts/cache-buster.bash",
+    "build": "run-s reset route snowpack-build cache-buster",
     "lint": "prettier --write . && eslint --fix --ext .js,.ts . && eslint --fix --ext .svelte .",
-    "route": "routify"
+    "snowpack-build": "snowpack build",
+    "reset": "rm -fr build",
+    "cache-buster": ". scripts/cache-buster.bash",
+    "routing": "routify",
+    "route": "routify -b"
   },
   "dependencies": {
     "svelte": "^3.38.3",

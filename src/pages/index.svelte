@@ -29,33 +29,9 @@ $: if (text.length > 30) {
   <span>{text}</span>
   <input bind:value={text} />
   <button on:click={() => $goto("/about")}>About ページへ</button>
+  <button on:click={() => $goto("/not-found")}>Not Found ページへ</button>
 </div>
 
 <style lang="scss">
-div {
-  @apply h-full flex flex-col items-center justify-center space-y-3;
-
-  span {
-    @apply font-bold;
-  }
-  :nth-child(1) {
-    @apply text-blue-700;
-  }
-  :nth-child(2) {
-    @apply text-blue-500;
-  }
-  :nth-child(3) {
-    @apply text-blue-300;
-  }
-
-  input {
-    @apply h-[100px] w-[300px];
-    @apply text-center rounded border-2 border-blue-100;
-    @apply focus:border-blue-900;
-  }
-
-  button {
-    @apply p-4 rounded bg-blue-800 text-blue-100;
-  }
-}
+@import "./index.scss";
 </style>

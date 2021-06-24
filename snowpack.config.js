@@ -6,6 +6,7 @@ module.exports = {
     "~": "./src"
   },
   devOptions: { tailwindConfig: "./tailwind.config.js" },
+  exclude: ["**/*.scss"],
   mount: {
     ".routify": { url: "/" },
     public: {

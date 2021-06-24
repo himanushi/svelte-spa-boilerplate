@@ -1,0 +1,7 @@
+div {
+  @apply h-full flex items-center justify-center;
+
+  a {
+    @apply underline text-blue-300 hover:text-blue-800 focus:text-blue-800 visited:text-purple-700;
+  }
+}
